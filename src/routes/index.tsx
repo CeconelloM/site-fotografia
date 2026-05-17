@@ -274,7 +274,7 @@ function Footer() {
             Vamos contar a <span className="italic">sua história</span>?
           </h2>
           <a
-            href="https://wa.me/5500000000000"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-12 inline-flex items-center gap-3 bg-foreground text-background px-10 py-4 text-xs uppercase tracking-[0.3em] hover:bg-foreground/90 transition-colors"
@@ -294,14 +294,14 @@ function Footer() {
           </div>
           <div>
             <p className="eyebrow">Escreva-nos</p>
-            <a href="mailto:ola@ceconellofotografia.com" className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
+            <a href={`mailto:${EMAIL}`} className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
               <Mail className="w-4 h-4" />
-              ola@ceconellofotografia.com
+              {EMAIL}
             </a>
           </div>
           <div>
             <p className="eyebrow">Acompanhe</p>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
               <Instagram className="w-4 h-4" />
               @ceconellofotografia
             </a>
@@ -327,6 +327,7 @@ function Index() {
       <Season />
       <Services />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }
