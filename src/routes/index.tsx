@@ -106,11 +106,13 @@ function Duo() {
       name: "Fernanda",
       img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
       bio: "Apaixonada por luz natural e pequenos gestos, Fernanda traduz cada cerimônia em imagens que respiram emoção. Mais de uma década registrando histórias pelo Brasil.",
+      portfolio: PORTFOLIO_LINKS.fernanda,
     },
     {
       name: "Thamires",
       img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
       bio: "Com olhar documental e estética atemporal, Thamires captura o invisível — os olhares, o silêncio antes do sim, o riso que se eterniza no álbum.",
+      portfolio: PORTFOLIO_LINKS.thamires,
     },
   ];
   return (
@@ -137,6 +139,14 @@ function Duo() {
               <p className="eyebrow">Fotógrafa</p>
               <h3 className="font-serif text-3xl md:text-4xl mt-2 mb-4">{p.name}</h3>
               <p className="text-muted-foreground leading-relaxed">{p.bio}</p>
+              <a
+                href={p.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center self-start border border-foreground px-7 py-3 text-[0.7rem] uppercase tracking-[0.3em] hover:bg-foreground hover:text-background transition-colors"
+              >
+                Portfólio individual
+              </a>
             </div>
           ))}
         </div>
