@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { WHATSAPP_URL, PORTFOLIO_LINKS, INSTAGRAM_URL, EMAIL } from "@/lib/contact";
 
 export const Route = createFileRoute("/")({
   component: Index,
