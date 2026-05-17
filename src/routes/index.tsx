@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { WHATSAPP_URL, PORTFOLIO_LINKS, INSTAGRAM_URL, EMAIL } from "@/lib/contact";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -104,11 +106,13 @@ function Duo() {
       name: "Fernanda",
       img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
       bio: "Apaixonada por luz natural e pequenos gestos, Fernanda traduz cada cerimônia em imagens que respiram emoção. Mais de uma década registrando histórias pelo Brasil.",
+      portfolio: PORTFOLIO_LINKS.fernanda,
     },
     {
       name: "Thamires",
       img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
       bio: "Com olhar documental e estética atemporal, Thamires captura o invisível — os olhares, o silêncio antes do sim, o riso que se eterniza no álbum.",
+      portfolio: PORTFOLIO_LINKS.thamires,
     },
   ];
   return (
@@ -135,6 +139,14 @@ function Duo() {
               <p className="eyebrow">Fotógrafa</p>
               <h3 className="font-serif text-3xl md:text-4xl mt-2 mb-4">{p.name}</h3>
               <p className="text-muted-foreground leading-relaxed">{p.bio}</p>
+              <a
+                href={p.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center self-start border border-foreground px-7 py-3 text-[0.7rem] uppercase tracking-[0.3em] hover:bg-foreground hover:text-background transition-colors"
+              >
+                Portfólio individual
+              </a>
             </div>
           ))}
         </div>
@@ -262,7 +274,7 @@ function Footer() {
             Vamos contar a <span className="italic">sua história</span>?
           </h2>
           <a
-            href="https://wa.me/5500000000000"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-12 inline-flex items-center gap-3 bg-foreground text-background px-10 py-4 text-xs uppercase tracking-[0.3em] hover:bg-foreground/90 transition-colors"
@@ -282,14 +294,14 @@ function Footer() {
           </div>
           <div>
             <p className="eyebrow">Escreva-nos</p>
-            <a href="mailto:ola@ceconellofotografia.com" className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
+            <a href={`mailto:${EMAIL}`} className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
               <Mail className="w-4 h-4" />
-              ola@ceconellofotografia.com
+              {EMAIL}
             </a>
           </div>
           <div>
             <p className="eyebrow">Acompanhe</p>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors">
               <Instagram className="w-4 h-4" />
               @ceconellofotografia
             </a>
@@ -315,6 +327,7 @@ function Index() {
       <Season />
       <Services />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }
