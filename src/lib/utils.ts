@@ -6,5 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function driveUrl(id: string): string {
-  return `https://lh3.googleusercontent.com/d/${id}`;
+  return `https://drive.google.com/thumbnail?id=${id}&sz=w1000`;
 }

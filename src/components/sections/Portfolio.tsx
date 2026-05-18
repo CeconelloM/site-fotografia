@@ -1,11 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import type { DriveFile } from "@/lib/google-drive";
 import { driveUrl } from "@/lib/utils";
-
-// Em cada grupo de 8, os índices 0 e 3 recebem row-span-2 para o layout escalonado
-function getSpan(i: number): string {
-  const pos = i % 8;
-  return pos === 0 || pos === 3 ? "row-span-2" : "";
-}
 
 interface PortfolioProps {
   images: DriveFile[];
@@ -29,17 +24,24 @@ export function Portfolio({ images }: PortfolioProps) {
         </div>
 
         {images.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-[200px] md:grid-rows-[260px] auto-rows-[200px] md:auto-rows-[260px] gap-3 md:gap-4">
-            {images.map((img, i) => (
-              <div key={img.id} className={`overflow-hidden ${getSpan(i)}`}>
-                <img
-                  src={driveUrl(img.id)}
-                  alt={img.name.replace(/\.[^.]+$/, "")}
-                  loading="lazy"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {images.map((img, i) => {
+              const isDestaque = i === 0 || i === 3;
+              return (
+                <div
+                  key={img.id}
+                  className={`overflow-hidden bg-muted ${isDestaque ? "row-span-2" : "aspect-square"}`}
+                >
+                  <img
+                    src={driveUrl(img.id)}
+                    alt={img.name.replace(/\.[^.]+$/, "")}
+                    loading={i < 4 ? "eager" : "lazy"}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  />
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div className="py-32 text-center border border-border">
@@ -50,12 +52,12 @@ export function Portfolio({ images }: PortfolioProps) {
         )}
 
         <div className="mt-16 flex justify-center">
-          <a
-            href="#contato"
+          <Link
+            to="/portfolio"
             className="inline-flex items-center gap-3 border border-foreground px-10 py-4 text-xs uppercase tracking-[0.3em] hover:bg-foreground hover:text-background transition-colors"
           >
             Ver portfólio completo
-          </a>
+          </Link>
         </div>
       </div>
     </section>

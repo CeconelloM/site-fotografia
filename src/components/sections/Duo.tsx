@@ -16,12 +16,13 @@ export function Duo() {
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
           {photographers.map((p) => (
             <div key={p.name} className="flex flex-col">
-              <div className="aspect-[4/5] overflow-hidden mb-8">
+              <div className="aspect-[4/5] overflow-hidden mb-8 bg-muted">
                 <img
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  onError={(e) => { e.currentTarget.style.display = "none"; }}
                 />
               </div>
               <p className="eyebrow">Fotógrafa</p>

@@ -10,7 +10,7 @@ import { Footer } from "@/components/sections/Footer";
 import { fetchDriveFiles } from "@/lib/google-drive";
 import { generalFolderId } from "@/lib/data";
 
-const MAX_HOME_PHOTOS = 8;
+const MAX_HOME_PHOTOS = 10;
 
 export const Route = createFileRoute("/")({
   component: Index,
