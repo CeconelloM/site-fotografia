@@ -11,7 +11,10 @@ export const Route = createFileRoute("/portfolio/$slug")({
     const photographer = photographers.find((p) => p.slug === params.slug);
     if (!photographer) throw notFound();
 
-    const images = await fetchDriveFiles(photographer.folderId).catch(() => []);
+    const images = await fetchDriveFiles(photographer.folderId).catch((err) => {
+      console.error(`[Portfolio ${photographer.name}] Erro ao buscar fotos do Drive:`, err);
+      return [];
+    });
     return { photographer, images };
   },
 });

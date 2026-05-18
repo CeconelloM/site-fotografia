@@ -15,30 +15,12 @@ const MAX_HOME_PHOTOS = 8;
 export const Route = createFileRoute("/")({
   component: Index,
   loader: async () => {
-    const files = await fetchDriveFiles(generalFolderId).catch(() => []);
+    const files = await fetchDriveFiles(generalFolderId).catch((err) => {
+      console.error("[Portfolio Home] Erro ao buscar fotos do Drive:", err);
+      return [];
+    });
     return { generalImages: files.slice(0, MAX_HOME_PHOTOS) };
   },
-  head: () => ({
-    meta: [
-      { title: "Ceconello Fotografia — Eternizando histórias" },
-      {
-        name: "description",
-        content:
-          "Fotografia de casamentos e eventos por Fernanda e Thamires. Imagens atemporais, narrativa delicada e olhar autoral.",
-      },
-      { property: "og:title", content: "Ceconello Fotografia — Eternizando histórias" },
-      {
-        property: "og:description",
-        content: "Fotografia de casamentos e eventos. Olhar autoral, registros atemporais.",
-      },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap",
-      },
-    ],
-  }),
 });
 
 function Index() {
