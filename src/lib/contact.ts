@@ -3,7 +3,7 @@
 // ============================================
 // Número no formato internacional, apenas dígitos (sem +, espaços ou traços).
 // Ex.: Brasil (55) + DDD (41) + número (999999999) => "5541999999999"
-export const WHATSAPP_NUMBER = "5541999999999";
+export const WHATSAPP_NUMBER = "5511940578701";
 
 // Mensagem pré-preenchida ao abrir o WhatsApp
 export const WHATSAPP_MESSAGE =

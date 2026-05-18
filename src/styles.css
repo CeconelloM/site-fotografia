@@ -29,6 +29,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-cream: var(--cream);
+  --color-whatsapp: var(--whatsapp);
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --tracking-luxury: 0.22em;
@@ -39,6 +40,7 @@
   --background: oklch(1 0 0);
   --foreground: oklch(0.22 0.005 264);
   --cream: oklch(0.975 0.008 85);
+  --whatsapp: #25D366;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.22 0.005 264);
   --popover: oklch(1 0 0);
