@@ -39,7 +39,7 @@ function PortfolioGeralPage() {
               Ceconello
             </h1>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Uma seleção dos melhores momentos registrados por Fernanda e Tamires — entre véus, risos e luzes que insistem em ficar.
+              Uma seleção dos melhores momentos registrados por Ceconello Photo Studio.
             </p>
           </div>
 

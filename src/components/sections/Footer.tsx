@@ -26,7 +26,7 @@ export function Footer() {
             <p className="eyebrow">Estúdio</p>
             <p className="mt-3 flex items-start gap-2 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-              Rua das Flores, 123 — Curitiba, PR
+              AV. São José, 702 — Alfenas, MG
             </p>
           </div>
           <div>
@@ -48,14 +48,24 @@ export function Footer() {
               className="mt-3 flex items-center gap-2 text-sm hover:text-muted-foreground transition-colors"
             >
               <Instagram className="w-4 h-4" />
-              @ceconellofotografia
+              @ceconellophotostudio
             </a>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p className="font-serif text-base text-foreground">Ceconello Fotografia</p>
-          <p>© 2026 — Todos os direitos reservados. Fernanda & Thamires.</p>
+        <div className="mt-16 mb-8 text-center">
+          <p className="font-serif italic text-sm text-muted-foreground leading-relaxed">
+            "Toda boa dádiva e todo dom perfeito vêm do alto, descendo do Pai das luzes."
+          </p>
+          <p className="mt-1 text-xs tracking-[0.2em] uppercase text-muted-foreground/80">
+            Tiago 1:17
+          </p>
+        </div>
+
+        <div className="mt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground border-t border-border pt-8">
+          <p className="font-serif text-base text-foreground">Ceconello Photo Studio
+          </p>
+          <p>© 2026 — Todos os direitos reservados. Ceconello Photo Studio.</p>
         </div>
       </div>
     </footer>

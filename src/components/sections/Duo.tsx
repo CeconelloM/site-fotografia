@@ -6,10 +6,10 @@ export function Duo() {
     <section id="duo" className="py-32 lg:py-44 px-6 lg:px-12 bg-[var(--color-cream)]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <p className="eyebrow">A dupla</p>
+          <p className="eyebrow">Sobre</p>
           <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl">Dois olhares, uma história</h2>
           <p className="mt-6 max-w-2xl mx-auto text-muted-foreground leading-relaxed">
-            Somos Fernanda e Thamires. Juntas, registramos casamentos e momentos
+            Somos Fernanda e Tamires. Juntas, registramos casamentos e momentos
             preciosos com a delicadeza de quem entende que cada história é única.
           </p>
         </div>

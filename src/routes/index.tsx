@@ -4,7 +4,7 @@ import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { Duo } from "@/components/sections/Duo";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { Season } from "@/components/sections/Season";
+import { Depoimentos } from "@/components/sections/Depoimentos";
 import { Services } from "@/components/sections/Services";
 import { Footer } from "@/components/sections/Footer";
 import { fetchDriveFiles } from "@/lib/google-drive";
@@ -31,7 +31,7 @@ function Index() {
       <Hero />
       <Duo />
       <Portfolio images={generalImages} />
-      <Season />
+      <Depoimentos />
       <Services />
       <Footer />
       <FloatingWhatsApp />

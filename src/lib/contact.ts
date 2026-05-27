@@ -7,7 +7,7 @@ export const WHATSAPP_NUMBER = "5511940578701";
 
 // Mensagem pré-preenchida ao abrir o WhatsApp
 export const WHATSAPP_MESSAGE =
-  "Olá! Gostaria de saber mais sobre os serviços da Ceconello Fotografia.";
+  "Olá! Gostaria de saber mais sobre os serviços da Ceconello Photo Studio.";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
@@ -19,5 +19,5 @@ export const PORTFOLIO_LINKS = {
   thamires: "https://instagram.com/thamires",
 };
 
-export const INSTAGRAM_URL = "https://instagram.com/ceconellofotografia";
-export const EMAIL = "ola@ceconellofotografia.com";
+export const INSTAGRAM_URL = "https://instagram.com/ceconellophotostudio";
+export const EMAIL = "cenellophotostudio@gmail.com";

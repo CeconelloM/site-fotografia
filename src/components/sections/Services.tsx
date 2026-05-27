@@ -1,4 +1,5 @@
 import { services } from "@/lib/data";
+import { WHATSAPP_NUMBER } from "@/lib/contact";
 
 export function Services() {
   return (
@@ -17,7 +18,9 @@ export function Services() {
               <h3 className="font-serif text-2xl md:text-3xl mt-6 mb-6">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
               <a
-                href="#contato"
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(s.whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 text-xs uppercase tracking-[0.25em] border-b border-foreground pb-1 self-start hover:opacity-60 transition-opacity"
               >
                 Consultar

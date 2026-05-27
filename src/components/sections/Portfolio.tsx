@@ -18,7 +18,7 @@ export function Portfolio({ images }: PortfolioProps) {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md leading-relaxed">
-            Uma seleção de momentos capturados nos últimos anos — entre véus,
+            Uma seleção de momentos capturados nos últimos anos. Entre véus,
             risos e luzes que insistem em ficar.
           </p>
         </div>

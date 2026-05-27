@@ -40,15 +40,18 @@ export const photographers: Photographer[] = [
 export const services = [
   {
     title: "Casamentos",
-    desc: "Cobertura completa do making of à festa. Narrativa documental, álbum impresso e galeria online.",
+    desc: "Pré-wedding, cobertura completa do making of e da festa, além de galeria online para acesso às fotos.",
+    whatsappMessage: "Quero saber mais sobre Casamento",
   },
   {
-    title: "Retratos",
-    desc: "Ensaios de pré-wedding, família e gestante em locação externa, com direção de luz e estética cinematográfica.",
+    title: "Gestantes e Infantil",
+    desc: "Ensaios de gestante, newborn, família e aniversário em locações externas, com direção de luz e estética personalizada.",
+    whatsappMessage: "Quero saber mais sobre Gestantes e Infantil",
   },
   {
     title: "Eventos Corporativos",
     desc: "Cobertura editorial de lançamentos, conferências e celebrações de marca com entrega ágil e profissional.",
+    whatsappMessage: "Quero saber mais sobre Evento Corporativo",
   },
 ];
 
